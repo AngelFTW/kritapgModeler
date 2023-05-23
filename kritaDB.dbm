@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+ Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="1.0.4" use-changelog="false" last-position="0,631" last-zoom="1" max-obj-count="7"
+	 default-schema="public" default-owner="postgres"
+	 layers="Default layer"
+	 active-layers="0"
+	 layer-name-colors="#000000"
+	 layer-rect-colors="#b4b4b4"
+	 show-layer-names="false" show-layer-rects="false">
+<database name="new_database" is-template="false" allow-conns="true">
+</database>
+
+<schema name="public" layers="0" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<table name="atividade" layers="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que descreve a atividade do contato no projeto]]> </comment>
+	<position x="960" y="220"/>
+	<column name="id" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="nome">
+		<type name="varchar" length="25"/>
+		<comment> <![CDATA[Campo para receber o nome da atividade do contato no projeto]]> </comment>
+	</column>
+	<constraint name="pk_atividade" type="pk-constr" table="public.atividade">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela atividade]]> </comment>
+	</constraint>
+</table>
+
+<table name="projeto_tipo" layers="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena dados do tipo de projeto]]> </comment>
+	<position x="120" y="80"/>
+	<column name="id" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="nome">
+		<type name="varchar" length="45"/>
+		<comment> <![CDATA[Campo para receber nome do tipo de projeto]]> </comment>
+	</column>
+	<constraint name="pk_projeto_tipo" type="pk-constr" table="public.projeto_tipo">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela projetoTipo]]> </comment>
+	</constraint>
+</table>
+
+<table name="cliente" layers="0" collapse-mode="1" max-obj-count="20" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena os dados do cliente.]]> </comment>
+	<position x="400" y="280"/>
+	<column name="id" not-null="true">
+		<type name="smallserial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="razao_social" not-null="true">
+		<type name="varchar" length="145"/>
+		<comment> <![CDATA[Campo para receber razão social do cliente]]> </comment>
+	</column>
+	<column name="nome_fantasia" not-null="true">
+		<type name="varchar" length="145"/>
+		<comment> <![CDATA[Campo para receber nome fantasia do cliente]]> </comment>
+	</column>
+	<column name="cnpj" not-null="true">
+		<type name="bigint" length="0"/>
+		<comment> <![CDATA[Campo para receber o CNPJ do cliente]]> </comment>
+	</column>
+	<column name="inscricao_estadual">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o numero da  Inscrição Estadual do cliente]]> </comment>
+	</column>
+	<column name="inscricao_municipal">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o numero da Inscrição Municipal do cliente]]> </comment>
+	</column>
+	<column name="rua" not-null="true">
+		<type name="varchar" length="145"/>
+		<comment> <![CDATA[Campo para receber nome da rua do cliente]]> </comment>
+	</column>
+	<column name="numero" not-null="true">
+		<type name="varchar" length="8"/>
+		<comment> <![CDATA[Campo para receber numero de endereço do cliente]]> </comment>
+	</column>
+	<column name="complemento">
+		<type name="varchar" length="100"/>
+		<comment> <![CDATA[Campo opcional para  receber complemento do endereço do cliente]]> </comment>
+	</column>
+	<column name="bairro" not-null="true">
+		<type name="varchar" length="45"/>
+		<comment> <![CDATA[Campo para receber bairro onde cliente se localiza]]> </comment>
+	</column>
+	<column name="cidade" not-null="true">
+		<type name="varchar" length="60"/>
+		<comment> <![CDATA[Campo para receber a cidade que o cliente está localizado]]> </comment>
+	</column>
+	<column name="uf" not-null="true">
+		<type name="char" length="2"/>
+		<comment> <![CDATA[Campo para receber sigla do estado onde cliente está localizado]]> </comment>
+	</column>
+	<column name="cep" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para recebr o CEP do cliente]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_cliente" type="pk-constr" table="public.cliente">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela cliente]]> </comment>
+	</constraint>
+</table>
+
+<table name="empresa" layers="0" collapse-mode="1" max-obj-count="20" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que  armazena dados da empresa]]> </comment>
+	<position x="340" y="880"/>
+	<column name="id" not-null="true">
+		<type name="smallserial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="razao_social" not-null="true">
+		<type name="varchar" length="145"/>
+		<comment> <![CDATA[Campo para receber a razao social da empresa]]> </comment>
+	</column>
+	<column name="nome_fantasia" not-null="true">
+		<type name="varchar" length="145"/>
+		<comment> <![CDATA[Campo para receber nome fantasia da empresa]]> </comment>
+	</column>
+	<column name="cnpj" not-null="true">
+		<type name="bigint" length="0"/>
+		<comment> <![CDATA[Campo para receber CNPJ da empresa]]> </comment>
+	</column>
+	<column name="inscricao_estadual">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber numero da inscrição Estadual da empresa]]> </comment>
+	</column>
+	<column name="inscricao_municipal">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o numero da inscrição Municipal da empresa]]> </comment>
+	</column>
+	<column name="rua" not-null="true">
+		<type name="varchar" length="145"/>
+		<comment> <![CDATA[Campo para receber nome da rua em que se localiza a empresa]]> </comment>
+	</column>
+	<column name="numero" not-null="true">
+		<type name="varchar" length="8"/>
+		<comment> <![CDATA[Campo para receber numero do endereço onde se localiza a empresa]]> </comment>
+	</column>
+	<column name="complemento">
+		<type name="varchar" length="100"/>
+		<comment> <![CDATA[Campo para receber complemento do endereço da empresa]]> </comment>
+	</column>
+	<column name="bairro" not-null="true">
+		<type name="varchar" length="45"/>
+		<comment> <![CDATA[Campo para receber bairro da empresa]]> </comment>
+	</column>
+	<column name="cidade" not-null="true">
+		<type name="varchar" length="60"/>
+		<comment> <![CDATA[Campo para receber o nome da cidade que a empresa esta localizada]]> </comment>
+	</column>
+	<column name="uf" not-null="true">
+		<type name="char" length="2"/>
+		<comment> <![CDATA[Campo para receber sigla do estado em que a empresa esta localizada]]> </comment>
+	</column>
+	<column name="cep" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber CEP onde a empresa se localiza]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela
+]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_empresa" type="pk-constr" table="public.empresa">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela empresa]]> </comment>
+	</constraint>
+</table>
+
+<table name="nota_fiscal" layers="0" collapse-mode="2" max-obj-count="14" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena dados da nota fiscal]]> </comment>
+	<position x="900" y="920"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na  tabela]]> </comment>
+	</column>
+	<column name="data_emissao" not-null="true">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber data de emissão da nota fiscal]]> </comment>
+	</column>
+	<column name="data_vencimento" not-null="true">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber data que a nota fiscal irá vencer]]> </comment>
+	</column>
+	<column name="ano_competencia" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber ano de compentência para pagamento da nota]]> </comment>
+	</column>
+	<column name="mes_competencia" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber mês de competência para pagamento da nota]]> </comment>
+	</column>
+	<column name="numero_nota_fiscal">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o número da nota fiscal emitida.]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela.]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela.]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_nota_fiscal" type="pk-constr" table="public.nota_fiscal">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela nota fiscal]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_cliente" index="2"/>
+		<object name="id_empresa" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_cliente" index="2"/>
+		<object name="fk_empresa" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="empresa_has_many_nota_fiscal" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="{dt}_uq"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#860002"
+	 src-table="public.empresa"
+	 dst-table="public.nota_fiscal"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="cliente_has_many_nota_fiscal" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#a207ad"
+	 src-table="public.cliente"
+	 dst-table="public.nota_fiscal"
+	 src-required="false" dst-required="false"/>
+
+<table name="item_pre_faturado" layers="0" collapse-mode="2" max-obj-count="8" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela para armazenar o agrupamento de apontamentos a serem faturados.]]> </comment>
+	<position x="1040" y="640"/>
+	<column name="id" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber a chave primária.]]> </comment>
+	</column>
+	<column name="descricao" not-null="true">
+		<type name="varchar" length="4000"/>
+		<comment> <![CDATA[Campo para armazenar a descrição do item.]]> </comment>
+	</column>
+	<column name="valor" not-null="true">
+		<type name="decimal" length="8"/>
+		<comment> <![CDATA[Campo para receber o valor do item da nota fiscal.]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+	</column>
+	<constraint name="pk_item_pre_faturado" type="pk-constr" table="public.item_pre_faturado">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+</dbmodel>
