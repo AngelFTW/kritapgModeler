@@ -214,6 +214,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 </table>
 
 <table name="nota_fiscal" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
+<table name="nota_fiscal" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
 	<schema name="public"/>
 	<role name="postgres"/>
 	<comment> <![CDATA[Tabela que armazena dados da nota fiscal]]> </comment>
