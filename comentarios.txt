@@ -1,0 +1,15 @@
+usuario cadastro: Campo para receber o id do usuario que fez a primeira inserção nesta tabela
+data cadastro: Campo para receber a data da primeira inserção nesta tabela
+usuario_ultima_alteracao: Campo para receber o id do usuario que fez a ultima alteração nesta tabela
+data_ultima_alteracao: Campo para receber a data da última alteração nesta tabela
+
+pk's: Chave de identificação da tabela (nome da tabela)
+
+To do/ask:
+Indexes
+Cor padrao
+Tabelas Parametrizacao
+
+
+
+quantidade_minutos_trabalhados deveria ser igual ou superior ao quantidade_minutos_cobrados(no codigo do krita)

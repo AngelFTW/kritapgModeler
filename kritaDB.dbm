@@ -3,7 +3,7 @@
 CAUTION: Do not modify this file unless you know what you are doing.
  Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="1.0.4" use-changelog="false" last-position="0,631" last-zoom="1" max-obj-count="7"
+<dbmodel pgmodeler-ver="1.0.4" use-changelog="false" last-position="848,0" last-zoom="0.45" max-obj-count="52"
 	 default-schema="public" default-owner="postgres"
 	 layers="Default layer"
 	 active-layers="0"
@@ -20,7 +20,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<schema name="public"/>
 	<role name="postgres"/>
 	<comment> <![CDATA[Tabela que descreve a atividade do contato no projeto]]> </comment>
-	<position x="960" y="220"/>
+	<position x="780" y="1220"/>
 	<column name="id" not-null="true">
 		<type name="smallint" length="0"/>
 		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
@@ -39,7 +39,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<schema name="public"/>
 	<role name="postgres"/>
 	<comment> <![CDATA[Tabela que armazena dados do tipo de projeto]]> </comment>
-	<position x="120" y="80"/>
+	<position x="220" y="80"/>
 	<column name="id" not-null="true">
 		<type name="smallint" length="0"/>
 		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
@@ -50,7 +50,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</column>
 	<constraint name="pk_projeto_tipo" type="pk-constr" table="public.projeto_tipo">
 		<columns names="id" ref-type="src-columns"/>
-		<comment> <![CDATA[Chave de identificação da tabela projetoTipo]]> </comment>
+		<comment> <![CDATA[Chave de identificação da tabela projeto_tipo]]> </comment>
 	</constraint>
 </table>
 
@@ -58,7 +58,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<schema name="public"/>
 	<role name="postgres"/>
 	<comment> <![CDATA[Tabela que armazena os dados do cliente.]]> </comment>
-	<position x="400" y="280"/>
+	<position x="280" y="1400"/>
 	<column name="id" not-null="true">
 		<type name="smallserial" length="0"/>
 		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
@@ -137,7 +137,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<schema name="public"/>
 	<role name="postgres"/>
 	<comment> <![CDATA[Tabela que  armazena dados da empresa]]> </comment>
-	<position x="340" y="880"/>
+	<position x="100" y="2620"/>
 	<column name="id" not-null="true">
 		<type name="smallserial" length="0"/>
 		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
@@ -213,14 +213,14 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
-<table name="nota_fiscal" layers="0" collapse-mode="2" max-obj-count="14" z-value="0">
+<table name="nota_fiscal" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
 	<schema name="public"/>
 	<role name="postgres"/>
 	<comment> <![CDATA[Tabela que armazena dados da nota fiscal]]> </comment>
-	<position x="900" y="920"/>
+	<position x="680" y="2660"/>
 	<column name="id" not-null="true">
 		<type name="serial" length="0"/>
-		<comment> <![CDATA[Campo para receber identificação na  tabela]]> </comment>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
 	</column>
 	<column name="data_emissao" not-null="true">
 		<type name="date" length="0"/>
@@ -240,7 +240,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</column>
 	<column name="numero_nota_fiscal">
 		<type name="integer" length="0"/>
-		<comment> <![CDATA[Campo para receber o número da nota fiscal emitida.]]> </comment>
+		<comment> <![CDATA[Campo para receber o número da nota fiscal emitida]]> </comment>
 	</column>
 	<column name="usuario_cadastro" not-null="true">
 		<type name="integer" length="0"/>
@@ -248,11 +248,11 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</column>
 	<column name="data_cadastro" not-null="true">
 		<type name="timestamp" length="0"/>
-		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela.]]> </comment>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
 	</column>
 	<column name="usuario_ultima_alteracao">
 		<type name="integer" length="0"/>
-		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela.]]> </comment>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
 	</column>
 	<column name="data_ultima_alteracao">
 		<type name="timestamp" length="0"/>
@@ -260,7 +260,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</column>
 	<constraint name="pk_nota_fiscal" type="pk-constr" table="public.nota_fiscal">
 		<columns names="id" ref-type="src-columns"/>
-		<comment> <![CDATA[Chave de identificação da tabela nota fiscal]]> </comment>
+		<comment> <![CDATA[Chave de identificação da tabela nota_fiscal]]> </comment>
 	</constraint>
 
 	<customidxs object-type="column">
@@ -290,24 +290,1918 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	 custom-color="#a207ad"
 	 src-table="public.cliente"
 	 dst-table="public.nota_fiscal"
-	 src-required="false" dst-required="false"/>
+	 src-required="false" dst-required="false">
+	<line>
+		<position x="440" y="2300"/>
+	<position x="840" y="2300"/>
+	</line>
+	<label ref-type="name-label">
+		<position x="144.068" y="118.609"/>
+	</label>
+</relationship>
 
 <table name="item_pre_faturado" layers="0" collapse-mode="2" max-obj-count="8" z-value="0">
 	<schema name="public"/>
 	<role name="postgres"/>
 	<comment> <![CDATA[Tabela para armazenar o agrupamento de apontamentos a serem faturados.]]> </comment>
-	<position x="1040" y="640"/>
+	<position x="1820" y="2280"/>
 	<column name="id" not-null="true">
 		<type name="integer" length="0"/>
-		<comment> <![CDATA[Campo para receber a chave primária.]]> </comment>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
 	</column>
 	<column name="descricao" not-null="true">
 		<type name="varchar" length="4000"/>
-		<comment> <![CDATA[Campo para armazenar a descrição do item.]]> </comment>
+		<comment> <![CDATA[Campo para armazenar a descrição do item]]> </comment>
 	</column>
 	<column name="valor" not-null="true">
 		<type name="decimal" length="8"/>
-		<comment> <![CDATA[Campo para receber o valor do item da nota fiscal.]]> </comment>
+		<comment> <![CDATA[Campo para receber o valor do item da nota fiscal]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_item_pre_faturado" type="pk-constr" table="public.item_pre_faturado">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela item_pre_faturado]]> </comment>
+	</constraint>
+</table>
+
+<table name="funcao" layers="0" collapse-mode="1" max-obj-count="7" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena a função de cada colaborador]]> </comment>
+	<position x="4920" y="2420"/>
+	<column name="id" not-null="true">
+		<type name="smallserial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="45"/>
+		<comment> <![CDATA[Campo para receber a descrição do nome da função]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true" default-value="current_timestamp">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber data da ultima alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_funcao" type="pk-constr" table="public.funcao">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela funcao]]> </comment>
+	</constraint>
+</table>
+
+<table name="faixa_salarial" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena a  faixa salarial  por níveis dos colaboradores]]> </comment>
+	<position x="4940" y="2780"/>
+	<column name="id" not-null="true">
+		<type name="smallserial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="25"/>
+		<comment> <![CDATA[Campo para receber o nome da faixa salarial]]> </comment>
+	</column>
+	<column name="clt_ou_pj" not-null="true">
+		<type name="char" length="1"/>
+		<comment> <![CDATA[Campo para receber a sigla C para CLT ou P para PJ para definir vinculo empregativo do colaborador]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true" default-value="current_timestamp">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_faixa_salarial" type="pk-constr" table="public.faixa_salarial">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela faixa_salarial]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_funcao" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="funcao_fk" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="funcao_has_many_faixa_salarial" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#fa86e9"
+	 src-table="public.funcao"
+	 dst-table="public.faixa_salarial"
+	 src-required="false" dst-required="false"/>
+
+<table name="hub" layers="0" collapse-mode="1" max-obj-count="2" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena dados da unidade]]> </comment>
+	<position x="4300" y="3320"/>
+	<column name="id" not-null="true">
+		<type name="smallserial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="25"/>
+		<comment> <![CDATA[Campo para receber o nome da unidade]]> </comment>
+	</column>
+	<constraint name="pk_hub" type="pk-constr" table="public.hub">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela hub]]> </comment>
+	</constraint>
+</table>
+
+<table name="cargo_salario" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que descreve o salario baseado no cargo]]> </comment>
+	<position x="4220" y="2960"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="valor" not-null="true">
+		<type name="decimal" length="7" precision="2"/>
+		<comment> <![CDATA[Campo para receber o valor da faixa salarial por colaborador]]> </comment>
+	</column>
+	<column name="data_validade" not-null="true">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo que recebe a data em que a faixa salarial passou a ser valida com o novo valor]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true" default-value="current_timestamp">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_cargo_salario" type="pk-constr" table="public.cargo_salario">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela cargo_salario]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_faixa_salarial" index="2"/>
+		<object name="id_hub" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="faixa_salarial_fk" index="2"/>
+		<object name="hub_fk" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="hub_has_many_cargo_salario" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#dd7c82"
+	 src-table="public.hub"
+	 dst-table="public.cargo_salario"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="faixa_salarial_has_many_cargo_salario" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#33af03"
+	 src-table="public.faixa_salarial"
+	 dst-table="public.cargo_salario"
+	 src-required="false" dst-required="false"/>
+
+<table name="cargo_salario_historico" layers="0" collapse-mode="2" max-obj-count="8" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que descreve o historico do salario baseado no cargo]]> </comment>
+	<position x="3800" y="2920"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Chave de identificacao da tabela]]> </comment>
+	</column>
+	<column name="valor" not-null="true">
+		<type name="decimal" length="7" precision="2"/>
+		<comment> <![CDATA[Campo para receber o valor da faixa salarial por colaborador]]> </comment>
+	</column>
+	<column name="data_validade" not-null="true">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo que recebe a data em que a faixa salarial passou a ser valida com o novo valor]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true" default-value="current_timestamp">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_cargo_salario_historico" type="pk-constr" table="public.cargo_salario_historico">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela cargo_salario_historico]]> </comment>
+	</constraint>
+</table>
+
+<table name="item_nota_fiscal" layers="0" collapse-mode="2" max-obj-count="10" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena itens da entrega e da nota fiscal]]> </comment>
+	<position x="1760" y="2660"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="descricao" not-null="true">
+		<type name="varchar" length="4000"/>
+		<comment> <![CDATA[Campo para receber descrição da informações da entrega do projeto]]> </comment>
+	</column>
+	<column name="valor" not-null="true">
+		<type name="decimal" length="8" precision="2"/>
+		<comment> <![CDATA[Campo para receber o valor da nota]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela
+]]> </comment>
+	</column>
+	<constraint name="pk_item_nota_fiscal" type="pk-constr" table="public.item_nota_fiscal">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela item_nota_fiscal]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_item_pre_faturado" index="2"/>
+		<object name="id_nota_fiscal" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_item_pre_faturado" index="2"/>
+		<object name="fk_nota_fiscal" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="nota_fiscal_has_many_item_nota_fiscal" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#be79d4"
+	 src-table="public.nota_fiscal"
+	 dst-table="public.item_nota_fiscal"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="item_pre_faturado_has_many_item_nota_fiscal" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#46d7e7"
+	 src-table="public.item_pre_faturado"
+	 dst-table="public.item_nota_fiscal"
+	 src-required="false" dst-required="false"/>
+
+<table name="departamento" layers="0" collapse-mode="2" max-obj-count="8" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena dados do departamento]]> </comment>
+	<position x="720" y="2020"/>
+	<column name="id" not-null="true">
+		<type name="smallserial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="60"/>
+		<comment> <![CDATA[Campo para receber nome do departamento]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_departamento" type="pk-constr" table="public.departamento">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela departamento]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_cliente" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_cliente" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="cliente_has_many_departamento" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#949b3e"
+	 src-table="public.cliente"
+	 dst-table="public.departamento"
+	 src-required="false" dst-required="false"/>
+
+<table name="contato" layers="0" collapse-mode="2" max-obj-count="19" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena os contatos responsáveis pelo projeto]]> </comment>
+	<position x="1120" y="1520"/>
+	<column name="id" not-null="true">
+		<type name="smallserial" length="0"/>
+		<comment> <![CDATA[Campo para receber  identificação na tabela]]> </comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="60"/>
+		<comment> <![CDATA[Campo para receber nome do contato]]> </comment>
+	</column>
+	<column name="email" not-null="true">
+		<type name="varchar" length="100"/>
+		<comment> <![CDATA[Campo para receber o e-mail do contato]]> </comment>
+	</column>
+	<column name="ddd_celular">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber o ddd do telefone celular]]> </comment>
+	</column>
+	<column name="ddd_fixo">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber ddd do celular fixo]]> </comment>
+	</column>
+	<column name="celular">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o numero do celular]]> </comment>
+	</column>
+	<column name="fixo">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber numero do celular fixo]]> </comment>
+	</column>
+	<column name="whatsapp" not-null="true">
+		<type name="boolean" length="0"/>
+		<comment> <![CDATA[Campo para identificar se o celular é whatsapp]]> </comment>
+	</column>
+	<column name="ramal">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber o ramal do telefone fixo]]> </comment>
+	</column>
+	<column name="skype">
+		<type name="varchar" length="40"/>
+		<comment> <![CDATA[Campo para receber código do skype]]> </comment>
+	</column>
+	<column name="discord">
+		<type name="varchar" length="40"/>
+		<comment> <![CDATA[Campo para receber código do discord]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_contato" type="pk-constr" table="public.contato">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela contato]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_departamento" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_departamento" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="departamento_has_many_contato" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#23ef2b"
+	 src-table="public.departamento"
+	 dst-table="public.contato"
+	 src-required="false" dst-required="false"/>
+
+<table name="etapa_tipo" layers="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena o tipo de etapa no projeto]]> </comment>
+	<position x="1360" y="20"/>
+	<column name="id" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="30"/>
+		<comment> <![CDATA[Campo que recebe nome do tipo de etapa no projeto]]> </comment>
+	</column>
+	<constraint name="pk_etapa_tipo" type="pk-constr" table="public.etapa_tipo">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação na tabela etapa_tipo]]> </comment>
+	</constraint>
+</table>
+
+<table name="percentual_etapa" layers="0" collapse-mode="2" max-obj-count="8" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela para armazenar a porcentagem das etapas por cliente]]> </comment>
+	<position x="880" y="40"/>
+	<column name="id" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber a chave primária da tabela]]> </comment>
+	</column>
+	<column name="percentual" not-null="true">
+		<type name="decimal" length="0"/>
+		<comment> <![CDATA[Campo para atribuir o percentual por etapa de orçamento]]> </comment>
+	</column>
+	<column name="data_validade" not-null="true">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para armazenar a validade da configuração da etapa]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_percentual_etapa" type="pk-constr" table="public.percentual_etapa">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela percentual_etapa]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_cliente" index="2"/>
+		<object name="id_etapa_tipo" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_cliente" index="2"/>
+		<object name="fk_etapa_tipo" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="cliente_has_many_percentual_etapa" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#e209a8"
+	 src-table="public.cliente"
+	 dst-table="public.percentual_etapa"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="etapa_tipo_has_many_percentual_etapa" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#45af73"
+	 src-table="public.etapa_tipo"
+	 dst-table="public.percentual_etapa"
+	 src-required="false" dst-required="false">
+	<label ref-type="name-label">
+		<position x="12.2637" y="-71.7104"/>
+	</label>
+</relationship>
+
+<table name="usuario" layers="0" collapse-mode="2" max-obj-count="12" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena as informações de login do usuario]]> </comment>
+	<position x="2860" y="2900"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="apelido" not-null="true">
+		<type name="varchar" length="36"/>
+		<comment> <![CDATA[Campo que recebe o apelido nome do usuário para cadastro]]> </comment>
+	</column>
+	<column name="email" not-null="true">
+		<type name="varchar" length="100"/>
+		<comment> <![CDATA[Campo para receber o email que será usado como login]]> </comment>
+	</column>
+	<column name="senha" not-null="true">
+		<type name="varchar" length="35"/>
+		<comment> <![CDATA[Campo para receber senha do login]]> </comment>
+	</column>
+	<column name="data_expiracao_senha" not-null="true">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo que recebe a tada de expiracação da senha]]> </comment>
+	</column>
+	<column name="data_bloqueio">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para armazenar a data de bloqueio do usuário]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_usuario" type="pk-constr" table="public.usuario">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela usuario]]> </comment>
+	</constraint>
+</table>
+
+<table name="contador_tentativas" layers="0" collapse-mode="2" max-obj-count="6" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela para armazenar tentativas de acesso ao sistema]]> </comment>
+	<position x="2880" y="3360"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="ip" not-null="true">
+		<type name="varchar" length="0"/>
+		<comment> <![CDATA[Campo para receber o ip do computador]]> </comment>
+	</column>
+	<column name="quantidade" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber quantidades tentativas de acesso ao sistema]]> </comment>
+	</column>
+	<column name="data_cadastro">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber a data de cadastro da tabela]]> </comment>
+	</column>
+	<constraint name="pk_contador_tentativas" type="pk-constr" table="public.contador_tentativas">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela contador_tentativas]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_usuario" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_usuario" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="usuario_has_many_contador_tentativas" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#dd4aa8"
+	 src-table="public.usuario"
+	 dst-table="public.contador_tentativas"
+	 src-required="false" dst-required="false"/>
+
+<table name="opcao_sistema" layers="0" collapse-mode="2" max-obj-count="8" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena as opções possiveis do sistema]]> </comment>
+	<position x="3420" y="3340"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="id_opcao_mae">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="descricao" not-null="true">
+		<type name="varchar" length="50"/>
+		<comment> <![CDATA[Campo para armazenar a descrição de cada opção do sistema inserida]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_opcao_sistema" type="pk-constr" table="public.opcao_sistema">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificao da tabela opcao_sistema]]> </comment>
+	</constraint>
+</table>
+
+<table name="usuario_opcao" layers="0" collapse-mode="2" max-obj-count="4" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="3440" y="2940"/>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+
+	<customidxs object-type="column">
+		<object name="id_opcao_sistema" index="1"/>
+		<object name="id_usuario" index="0"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_opcao_sistema" index="1"/>
+		<object name="fk_usuario" index="0"/>
+	</customidxs>
+</table>
+
+<relationship name="usuario_has_many_usuario_opcao" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#6ad307"
+	 src-table="public.usuario"
+	 dst-table="public.usuario_opcao"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="opcao_sistema_has_many_usuario_opcao" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#822e70"
+	 src-table="public.opcao_sistema"
+	 dst-table="public.usuario_opcao"
+	 src-required="false" dst-required="false"/>
+
+<table name="colaborador" layers="0" collapse-mode="2" max-obj-count="16" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena dados do colaborador]]> </comment>
+	<position x="3000" y="2140"/>
+	<column name="id" not-null="true">
+		<type name="smallserial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="60"/>
+		<comment> <![CDATA[Campo para receber nome do colaborador]]> </comment>
+	</column>
+	<column name="data_admissao" not-null="true">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber data de admissão do colaborador na empresa]]> </comment>
+	</column>
+	<column name="data_demissao">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber data de demissao do colaborador na empresa]]> </comment>
+	</column>
+	<column name="ddd">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber o ddd do telefone]]> </comment>
+	</column>
+	<column name="celular">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o numero do celular]]> </comment>
+	</column>
+	<column name="whastapp">
+		<type name="boolean" length="0"/>
+		<comment> <![CDATA[Campo para identificar se o número do celular é whatsapp]]> </comment>
+	</column>
+	<column name="skype">
+		<type name="varchar" length="40"/>
+		<comment> <![CDATA[Campo para receber codigo do skype]]> </comment>
+	</column>
+	<column name="discord">
+		<type name="varchar" length="40"/>
+		<comment> <![CDATA[Campo para receber codigo do discord]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_colaborador" type="pk-constr" table="public.colaborador">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela colaborador]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_usuario" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_usuario" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="usuario_has_many_colaborador" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#46c362"
+	 src-table="public.usuario"
+	 dst-table="public.colaborador"
+	 src-required="false" dst-required="false"/>
+
+<table name="premiacao" layers="0" collapse-mode="2" max-obj-count="8" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela relacionada às premiações dos colaboradores]]> </comment>
+	<position x="2440" y="3240"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="ano" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber o ano referente à premiação]]> </comment>
+	</column>
+	<column name="mes" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber o mês da premiação]]> </comment>
+	</column>
+	<column name="usuario_pagamento">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o usuario que cadastrou o pagamento]]> </comment>
+	</column>
+	<column name="data_pagamento">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber a data de pagamento da premiação]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_premiacao" type="pk-constr" table="public.premiacao">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela premiacao]]> </comment>
+	</constraint>
+</table>
+
+<table name="premiacao_detalhe" layers="0" collapse-mode="2" max-obj-count="9" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela sobre os detalhes de premiação de um colaborador específico]]> </comment>
+	<position x="2420" y="2820"/>
+	<column name="id" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="valor" not-null="true">
+		<type name="decimal" length="7" precision="2"/>
+		<comment> <![CDATA[Campo para receber o valor da premiação]]> </comment>
+	</column>
+	<column name="status_meta_premiacao" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber o status da meta da tabela premiação (se a meta do mês foi batida)]]> </comment>
+	</column>
+	<column name="valor_ajuste">
+		<type name="decimal" length="7" precision="2"/>
+		<comment> <![CDATA[Campo para ajustar o valor]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteraco">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteraco">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_premiacao_detalhe" type="pk-constr" table="public.premiacao_detalhe">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela premiacao_detalhe]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_colaborador" index="2"/>
+		<object name="id_premiacao" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_colaborador" index="2"/>
+		<object name="fk_premiacao" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="premiacao_has_many_premiacao_detalhe" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#43db1a"
+	 src-table="public.premiacao"
+	 dst-table="public.premiacao_detalhe"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="colaborador_has_many_premiacao_detalhe" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#d8eb6a"
+	 src-table="public.colaborador"
+	 dst-table="public.premiacao_detalhe"
+	 src-required="false" dst-required="false">
+	<label ref-type="name-label">
+		<position x="0" y="0"/>
+	</label>
+</relationship>
+
+<table name="preco" layers="0" collapse-mode="2" max-obj-count="10" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena o valor minuto de cada tipo de projeto para cada cliente]]> </comment>
+	<position x="180" y="300"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="data_validade" not-null="true">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber a data de validade do preço do cliente no projeto]]> </comment>
+	</column>
+	<column name="valor_hora" not-null="true">
+		<type name="decimal" length="6" precision="2"/>
+		<comment> <![CDATA[Campo para receber o valor por minuto do cliente para cada tipo de projeto]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_preco" type="pk-constr" table="public.preco">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela preco]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_cliente" index="1"/>
+		<object name="id_projeto_tipo" index="2"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_cliente" index="1"/>
+		<object name="fk_projeto_tipo" index="2"/>
+	</customidxs>
+</table>
+
+<relationship name="cliente_has_many_preco" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#c68d30"
+	 src-table="public.cliente"
+	 dst-table="public.preco"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="projeto_tipo_has_many_preco" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#dc1d3a"
+	 src-table="public.projeto_tipo"
+	 dst-table="public.preco"
+	 src-required="false" dst-required="false"/>
+
+<table name="projeto" layers="0" collapse-mode="2" max-obj-count="16" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena dados do projeto]]> </comment>
+	<position x="2000" y="480"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="id_projeto_mae">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="60"/>
+		<comment> <![CDATA[Campo para receber nome do projeto]]> </comment>
+	</column>
+	<column name="descricao" not-null="true">
+		<type name="varchar" length="4000"/>
+		<comment> <![CDATA[Campo para receber descrição explicativa do projeto]]> </comment>
+	</column>
+	<column name="data_entrada" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para estimar data de entrega do projeto]]> </comment>
+	</column>
+	<column name="data_inicio">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data que o projeto foi iniciado]]> </comment>
+	</column>
+	<column name="data_fim">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber a data fim do projeto]]> </comment>
+	</column>
+	<column name="quantidade_total_minutos" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber total de minutos que o projeto será concluido]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_projeto" type="pk-constr" table="public.projeto">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela projeto]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_colaborador" index="3"/>
+		<object name="id_preco" index="2"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_colaborador" index="3"/>
+		<object name="fk_preco" index="2"/>
+	</customidxs>
+</table>
+
+<relationship name="preco_has_many_projeto" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#82f355"
+	 src-table="public.preco"
+	 dst-table="public.projeto"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="colaborador_has_many_projeto" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#9cdf4e"
+	 src-table="public.colaborador"
+	 dst-table="public.projeto"
+	 src-required="false" dst-required="false">
+	<line>
+		<position x="3057.53" y="1502.86"/>
+	<position x="2720" y="1260"/>
+	</line>
+</relationship>
+
+<table name="projeto_atividade" layers="0" collapse-mode="2" max-obj-count="7" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena a função de determinado contato no projeto]]> </comment>
+	<position x="1180" y="1160"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber idetntificação na tabela]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_projeto_atividade" type="pk-constr" table="public.projeto_atividade">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela projeto_atividade]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_atividade" index="3"/>
+		<object name="id_contato" index="1"/>
+		<object name="id_projeto" index="2"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_atividade" index="3"/>
+		<object name="fk_contato" index="1"/>
+		<object name="fk_projeto" index="2"/>
+	</customidxs>
+</table>
+
+<relationship name="contato_has_many_projeto_atividade" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#9eef9d"
+	 src-table="public.contato"
+	 dst-table="public.projeto_atividade"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="projeto_has_many_projeto_atividade" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#25e5f4"
+	 src-table="public.projeto"
+	 dst-table="public.projeto_atividade"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="atividade_has_many_projeto_atividade" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#40ff00"
+	 src-table="public.atividade"
+	 dst-table="public.projeto_atividade"
+	 src-required="false" dst-required="false"/>
+
+<table name="documento_tipo" layers="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela para armazenar informações das categorias do documento]]> </comment>
+	<position x="1100" y="2040"/>
+	<column name="id" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="50"/>
+		<comment> <![CDATA[Campo para receber o nome do tipo do documento]]> </comment>
+	</column>
+	<constraint name="pk_documento_tipo" type="pk-constr" table="public.documento_tipo">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela documento_tipo]]> </comment>
+	</constraint>
+</table>
+
+<table name="extensao_documento" layers="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena dados da extensão do documento]]> </comment>
+	<position x="1540" y="1940"/>
+	<column name="id" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Chave para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="35"/>
+		<comment> <![CDATA[Campo para receber a descrição da extensão do documento]]> </comment>
+	</column>
+	<constraint name="pk_extensao_documento" type="pk-constr" table="public.extensao_documento">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela extensao_documento]]> </comment>
+	</constraint>
+</table>
+
+<table name="documento_projeto" layers="0" collapse-mode="2" max-obj-count="12" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena todos os documentos do sistema]]> </comment>
+	<position x="1260" y="2280"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="descricao" not-null="true">
+		<type name="varchar" length="4000"/>
+		<comment> <![CDATA[Campo para receber descrição expllicativa do documento]]> </comment>
+	</column>
+	<column name="data_criacao" not-null="true">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber data de criação do documento]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_documento_projeto" type="pk-constr" table="public.documento_projeto">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela documento_projeto]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_documento_tipo" index="3"/>
+		<object name="id_extensao_documento" index="2"/>
+		<object name="id_projeto" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_documento_tipo" index="3"/>
+		<object name="fk_extensao_documento" index="2"/>
+		<object name="fk_projeto" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="projeto_has_many_documento_projeto" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#ef55e6"
+	 src-table="public.projeto"
+	 dst-table="public.documento_projeto"
+	 src-required="false" dst-required="false">
+	<line>
+		<position x="2120" y="1480"/>
+	<position x="1580" y="1480"/>
+	</line>
+	<label ref-type="name-label">
+		<position x="0.447962" y="9.24701"/>
+	</label>
+</relationship>
+
+<relationship name="extensao_documento_has_many_documento_projeto" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#a595f3"
+	 src-table="public.extensao_documento"
+	 dst-table="public.documento_projeto"
+	 src-required="false" dst-required="false">
+	<label ref-type="name-label">
+		<position x="218.305" y="-41.253"/>
+	</label>
+</relationship>
+
+<relationship name="documento_tipo_has_many_documento_projeto" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#732b4f"
+	 src-table="public.documento_tipo"
+	 dst-table="public.documento_projeto"
+	 src-required="false" dst-required="false">
+	<label ref-type="name-label">
+		<position x="-128.532" y="28.747"/>
+	</label>
+</relationship>
+
+<table name="etapa" layers="0" collapse-mode="2" max-obj-count="15" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena dados das etapas do projeto]]> </comment>
+	<position x="2600" y="80"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="data_inicio_prevista">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber data de inicio prevista da etapa no projeto]]> </comment>
+	</column>
+	<column name="data_termino_prevista">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber data termino prevista da etapa no projeto]]> </comment>
+	</column>
+	<column name="data_inicio">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber data de iniciação da etapa no projeto]]> </comment>
+	</column>
+	<column name="data_termino">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber data de termino da etapa no projeto]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="etapa_pk" type="pk-constr" table="public.etapa">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela projeto_etapa]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_item_pre_faturado" index="3"/>
+		<object name="id_percentual_etapa" index="2"/>
+		<object name="id_premiacao" index="4"/>
+		<object name="id_projeto" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_item_pre_faturado" index="3"/>
+		<object name="fk_percentual_etapa" index="2"/>
+		<object name="fk_premiacao" index="4"/>
+		<object name="fk_projeto" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="projeto_has_many_etapa" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#295986"
+	 src-table="public.projeto"
+	 dst-table="public.etapa"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="percentual_etapa_has_many_etapa" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#e5ca4a"
+	 src-table="public.percentual_etapa"
+	 dst-table="public.etapa"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="item_pre_faturado_has_many_etapa" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#dc09b3"
+	 src-table="public.item_pre_faturado"
+	 dst-table="public.etapa"
+	 src-required="false" dst-required="false">
+	<line>
+		<position x="2300" y="2380"/>
+	<position x="2300" y="1360"/>
+	</line>
+	<label ref-type="name-label">
+		<position x="116.705" y="-587.891"/>
+	</label>
+</relationship>
+
+<relationship name="premiacao_has_many_etapa" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#1f3deb"
+	 src-table="public.premiacao"
+	 dst-table="public.etapa"
+	 src-required="false" dst-required="false">
+	<line>
+		<position x="2260" y="3340"/>
+	<position x="2260" y="1320"/>
+	</line>
+	<label ref-type="name-label">
+		<position x="-15.2955" y="52.109"/>
+	</label>
+</relationship>
+
+<table name="apontamento_etapa" layers="0" collapse-mode="2" max-obj-count="13" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela para armazenar informações dos apontamentos da etapa do projeto]]> </comment>
+	<position x="3260" y="120"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="descricao" not-null="true">
+		<type name="varchar" length="4000"/>
+		<comment> <![CDATA[Campo para receber a descrição do apontamento da etapa do projeto]]> </comment>
+	</column>
+	<column name="quantidade_minutos_trabalhados">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Número de minutos totais trabalhados no dia]]> </comment>
+	</column>
+	<column name="quantidade_minutos_cobrados" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Quantidade de minutos cobrados no total]]> </comment>
+	</column>
+	<column name="data_apontamento" not-null="true">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber a data do apontamento cadastrado]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_apontamento_etapa" type="pk-constr" table="public.apontamento_etapa">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave primrária da tabela colaborador_projeto_etapa]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_colaborador" index="2"/>
+		<object name="id_etapa" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_colaborador" index="2"/>
+		<object name="fk_etapa" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="etapa_has_many_apontamento_etapa" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#ff4800"
+	 src-table="public.etapa"
+	 dst-table="public.apontamento_etapa"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="colaborador_has_many_apontamento_etapa" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#a04438"
+	 src-table="public.colaborador"
+	 dst-table="public.apontamento_etapa"
+	 src-required="false" dst-required="false">
+	<line>
+		<position x="3460" y="1940"/>
+	<position x="3448.77" y="1095.66"/>
+	</line>
+</relationship>
+
+<table name="time" layers="0" collapse-mode="2" max-obj-count="7" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela para armazenar os times de acordo com os colaboradores]]> </comment>
+	<position x="3040" y="620"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="100"/>
+		<comment> <![CDATA[Campo para receber o nome do time de colaboradores]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_time" type="pk-constr" table="public.&quot;time&quot;">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela]]> </comment>
+	</constraint>
+</table>
+
+<table name="atividade_time" layers="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela para armezar informações da atividade do colaborador no time]]> </comment>
+	<position x="2720" y="640"/>
+	<column name="id" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Chave de identificação da tabela]]> </comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="30"/>
+		<comment> <![CDATA[Campo para receber o nome da atividade exercida pelo colaborador no time]]> </comment>
+	</column>
+	<constraint name="pk_atividade_time" type="pk-constr" table="public.atividade_time">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela atividadeTime]]> </comment>
+	</constraint>
+</table>
+
+<table name="colaborador_time" layers="0" collapse-mode="2" max-obj-count="9" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela para armazenar informações do time com colaborador]]> </comment>
+	<position x="2940" y="1000"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Chave de identificação da tabela]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_colaborador_time" type="pk-constr" table="public.colaborador_time">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave primária da tabela colaborador time]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_atividade_time" index="3"/>
+		<object name="id_colaborador" index="1"/>
+		<object name="id_time" index="2"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_atividade_time" index="3"/>
+		<object name="fk_colaborador" index="1"/>
+		<object name="fk_time" index="2"/>
+	</customidxs>
+</table>
+
+<relationship name="colaborador_has_many_colaborador_time" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#b8bf8e"
+	 src-table="public.colaborador"
+	 dst-table="public.colaborador_time"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="time_has_many_colaborador_time" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#399c63"
+	 src-table="public.&quot;time&quot;"
+	 dst-table="public.colaborador_time"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="atividade_time_has_many_colaborador_time" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#76d662"
+	 src-table="public.atividade_time"
+	 dst-table="public.colaborador_time"
+	 src-required="false" dst-required="false"/>
+
+<table name="qualificacao" layers="0" collapse-mode="2" max-obj-count="10" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena qualificação dos colaboradores]]> </comment>
+	<position x="4220" y="2200"/>
+	<column name="id" not-null="true">
+		<type name="smallserial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="data_inicio" not-null="true">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo que armazena a data de inicio que o colaborador iniciou na faixa salarial]]> </comment>
+	</column>
+	<column name="data_fim">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo que armazena a data fim que o colaborador encerrou na faixa salarial]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela
+]]> </comment>
+	</column>
+	<constraint name="pk_qualificacao" type="pk-constr" table="public.qualificacao">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela qualificacao]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_cargo_salario" index="1"/>
+		<object name="id_colaborador" index="2"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_cargo_salario" index="1"/>
+		<object name="fk_colaborador" index="2"/>
+	</customidxs>
+</table>
+
+<relationship name="cargo_salario_has_many_qualificacao" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#ff621f"
+	 src-table="public.cargo_salario"
+	 dst-table="public.qualificacao"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="colaborador_has_many_qualificacao" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#51e082"
+	 src-table="public.colaborador"
+	 dst-table="public.qualificacao"
+	 src-required="false" dst-required="false"/>
+
+<table name="entrega" layers="0" collapse-mode="2" max-obj-count="15" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela que armazena dados das entregas do projeto]]> </comment>
+	<position x="2420" y="1460"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="id_contato_homologacao">
+		<type name="smallint" length="0"/>
+	</column>
+	<column name="id_contato_aprovacao">
+		<type name="smallint" length="0"/>
+	</column>
+	<column name="data_inicio_prevista">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber data de inicio prevista da entrega da etapa do projeto]]> </comment>
+	</column>
+	<column name="data_termino_prevista">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber data de termino prevista da entrega da etapa do projeto]]> </comment>
+	</column>
+	<column name="data_inicio">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber data de inicio da entraga da etapa do projeto]]> </comment>
+	</column>
+	<column name="data_termino">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber data de entrega do projeto]]> </comment>
+	</column>
+	<column name="descricao" not-null="true">
+		<type name="varchar" length="4000"/>
+		<comment> <![CDATA[Campo para receber a descrição de definição da entrega]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela]]> </comment>
+	</column>
+	<constraint name="pk_entrega" type="pk-constr" table="public.entrega">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela entrega]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_projeto" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_projeto" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="projeto_has_many_entrega" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#7dcc5b"
+	 src-table="public.projeto"
+	 dst-table="public.entrega"
+	 src-required="false" dst-required="false"/>
+
+<table name="status_apontamento" layers="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela para armazenar informações do status do apontamento]]> </comment>
+	<position x="2460" y="1880"/>
+	<column name="id" not-null="true">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[Campo para receber identificação na tabela]]> </comment>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="varchar" length="50"/>
+		<comment> <![CDATA[Campo para receber o nome do status do apontamento]]> </comment>
+	</column>
+	<constraint name="pk_status_apontamento" type="pk-constr" table="public.status_apontamento">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave primária da tabela status_apontamento]]> </comment>
+	</constraint>
+</table>
+
+<table name="apontamento" layers="0" collapse-mode="2" max-obj-count="21" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<comment> <![CDATA[Tabela intermediária que armazena minutos trabalhados pelo colaborador no projeto]]> </comment>
+	<position x="2420" y="2080"/>
+	<column name="id" not-null="true">
+		<type name="serial" length="0"/>
+		<comment> <![CDATA[Campo para receber a identificação na tabela]]> </comment>
+	</column>
+	<column name="descricao" not-null="true">
+		<type name="varchar" length="4000"/>
+		<comment> <![CDATA[Campo para receber descrição do colaborador referente a entrega construida pelo mesmo]]> </comment>
+	</column>
+	<column name="quantidade_minutos_cobrados" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para descrever a quantidade em minutos que o colaborador trabalhou no projeto]]> </comment>
+	</column>
+	<column name="quantidade_minutos_trabalhados" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para descrever a quantidade de minutos que o colaborador trabalhou a mais no projeto]]> </comment>
+	</column>
+	<column name="data_apontamento" not-null="true">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber a data em que houve o apontamento]]> </comment>
+	</column>
+	<column name="data_conferencia">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para armazenar a data da conferência]]> </comment>
+	</column>
+	<column name="data_reprovacao_conferencia">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para armazenar a data da reprovação da conferência]]> </comment>
+	</column>
+	<column name="data_aprovacao">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber a data de aprovação do apontamento]]> </comment>
+	</column>
+	<column name="data_reprovacao">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[Campo para receber a data de reprovação do apontamento]]> </comment>
+	</column>
+	<column name="usuario_cadastro" not-null="true">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="data_cadastro" not-null="true">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da primeira inserção nesta tabela]]> </comment>
+	</column>
+	<column name="usuario_ultima_alteracao">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[Campo para receber o id do usuario que fez a ultima alteração nesta tabela]]> </comment>
+	</column>
+	<column name="data_ultima_alteracao">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[Campo para receber a data da última alteração nesta tabela
+]]> </comment>
+	</column>
+	<constraint name="pk_apontamento" type="pk-constr" table="public.apontamento">
+		<columns names="id" ref-type="src-columns"/>
+		<comment> <![CDATA[Chave de identificação da tabela]]> </comment>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_colaborador" index="1"/>
+		<object name="id_entrega" index="4"/>
+		<object name="id_item_pre_faturado" index="5"/>
+		<object name="id_premiacao" index="3"/>
+		<object name="id_status_apontamento" index="2"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="fk_colaborador" index="1"/>
+		<object name="fk_entrega" index="4"/>
+		<object name="fk_item_pre_faturado" index="5"/>
+		<object name="fk_premiacao" index="3"/>
+		<object name="fk_status_apontamento" index="2"/>
+	</customidxs>
+</table>
+
+<relationship name="colaborador_has_many_apontamento" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#3f8015"
+	 src-table="public.colaborador"
+	 dst-table="public.apontamento"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="status_apontamento_has_many_apontamento" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#fc3cb7"
+	 src-table="public.status_apontamento"
+	 dst-table="public.apontamento"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="premiacao_has_many_apontamento" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#889a1a"
+	 src-table="public.premiacao"
+	 dst-table="public.apontamento"
+	 src-required="false" dst-required="false">
+	<line>
+		<position x="2360" y="3300"/>
+	<position x="2360" y="2320"/>
+	</line>
+</relationship>
+
+<relationship name="entrega_has_many_apontamento" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#d3564f"
+	 src-table="public.entrega"
+	 dst-table="public.apontamento"
+	 src-required="false" dst-required="false">
+	<line>
+		<position x="2860" y="1640"/>
+	<position x="2860" y="2180"/>
+	</line>
+</relationship>
+
+<relationship name="item_pre_faturado_has_many_apontamento" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="pk_{dt}" uq-pattern="uq_{dt}"
+	 src-fk-pattern="fk_{st}"
+	 custom-color="#bb5977"
+	 src-table="public.item_pre_faturado"
+	 dst-table="public.apontamento"
+	 src-required="false" dst-required="false">
+	<label ref-type="name-label">
+		<position x="-182.845" y="-54.0355"/>
+	</label>
+</relationship>
+
+<index name="unq_usuario" table="public.usuario"
+	 concurrent="false" unique="true" fast-update="false" buffering="false"
+	 index-type="btree" factor="0">
+		<idxelement use-sorting="false">
+			<column name="email"/>
+		</idxelement>
+	<columns names="email"/>
+</index>
+
+<table name="parametrizacao" layers="0" collapse-mode="2" max-obj-count="10" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="3615.56" y="675.556"/>
+	<column name="id" not-null="true">
+		<type name="smallserial" length="0"/>
+	</column>
+	<column name="percentual_bonificacao" not-null="true">
+		<type name="decimal" length="3" precision="1"/>
+	</column>
+	<column name="percentual_teto" not-null="true">
+		<type name="decimal" length="3" precision="1"/>
+	</column>
+	<column name="contador_gatilho" not-null="true">
+		<type name="smallint" length="0"/>
+	</column>
+	<column name="data_validade" not-null="true">
+		<type name="date" length="0"/>
 	</column>
 	<column name="usuario_cadastro" not-null="true">
 		<type name="integer" length="0"/>
@@ -321,9 +2215,76 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="data_ultima_alteracao">
 		<type name="timestamp" length="0"/>
 	</column>
-	<constraint name="pk_item_pre_faturado" type="pk-constr" table="public.item_pre_faturado">
+	<constraint name="parametrizacao_pk" type="pk-constr" table="public.parametrizacao">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
 </table>
+
+<constraint name="fk_opcao_sistema" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="SET NULL" ref-table="public.opcao_sistema" table="public.opcao_sistema">
+	<columns names="id_opcao_mae" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="id_projeto" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="SET NULL" ref-table="public.projeto" table="public.projeto">
+	<columns names="id_projeto_mae" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_contato_homologacao" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="SET NULL" ref-table="public.contato" table="public.entrega">
+	<columns names="id_contato_homologacao" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_contato_aprovacao" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="SET NULL" ref-table="public.contato" table="public.entrega">
+	<columns names="id_contato_aprovacao" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<relationship name="rel_opcao_sistema_opcao_sistema" type="relfk" layers="0"
+	 custom-color="#ff0004"
+	 src-table="public.opcao_sistema"
+	 dst-table="public.opcao_sistema" reference-fk="fk_opcao_sistema"
+	 src-required="false" dst-required="false">
+	<line>
+		<position x="3778.3" y="3412.77"/>
+	<position x="3778.3" y="3307"/>
+	<position x="3636.87" y="3307"/>
+	</line>
+</relationship>
+
+<relationship name="rel_projeto_projeto" type="relfk" layers="0"
+	 custom-color="#ff0004"
+	 src-table="public.projeto"
+	 dst-table="public.projeto" reference-fk="id_projeto"
+	 src-required="false" dst-required="false">
+	<line>
+		<position x="2378.1" y="608.575"/>
+	<position x="2378.1" y="447"/>
+	<position x="2230.07" y="447"/>
+	</line>
+</relationship>
+
+<relationship name="rel_entrega_contato" type="relfk" layers="0"
+	 custom-color="#ff0004"
+	 src-table="public.entrega"
+	 dst-table="public.contato" reference-fk="fk_contato_homologacao"
+	 src-required="false" dst-required="false">
+	<label ref-type="name-label">
+		<position x="-72.1455" y="-42.9508"/>
+	</label>
+</relationship>
+
+<relationship name="rel_entrega_contato1" type="relfk" layers="0"
+	 src-table="public.entrega"
+	 dst-table="public.contato" reference-fk="fk_contato_aprovacao"
+	 src-required="false" dst-required="false">
+	<label ref-type="name-label">
+		<position x="91.3545" y="-13.0647"/>
+	</label>
+</relationship>
 
 </dbmodel>
